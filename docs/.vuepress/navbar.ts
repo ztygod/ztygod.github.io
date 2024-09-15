@@ -9,6 +9,7 @@ export const navbar = defineNavbarConfig([
     text: '笔记',
     items: [
       { text: '示例', link: '/notes/demo/README.md' },
-      { text: 'CSS面试', link: 'notes/CSS/README.md' }]
+      { text: 'CSS面试', link: '/notes/CSS/README.md' },
+      { text: 'VUE面试', link: '/notes/VUE/README.md' }]
   },
 ])

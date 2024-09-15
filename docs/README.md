@@ -9,7 +9,7 @@ config:
     hero:
       name: Tian Yi's Blog
       tagline: 学习记录
-      text: 每个人心里都藏这一个死小孩
+      text: 每个人心里都藏着一个死小孩
       actions:
         -
           theme: brand

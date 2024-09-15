@@ -11,9 +11,14 @@ const CSSNote = defineNoteConfig({
   link: '/CSS',
   sidebar: 'auto'
 })
+const VUENote = defineNoteConfig({
+  dir: 'VUE',
+  link: '/VUE',
+  sidebar: 'auto'
+})
 
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [demoNote, CSSNote],
+  notes: [demoNote, CSSNote, VUENote],
 })
