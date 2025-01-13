@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/12/08/tianyi/"/>
+    <link rel="canonical" href="http://example.com/2025/01/13/回溯/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,14 +23,14 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tianyi">
-<meta property="og:url" content="http://example.com/2024/12/08/tianyi/index.html">
+<meta property="og:title" content="回溯">
+<meta property="og:url" content="http://example.com/2025/01/13/%E5%9B%9E%E6%BA%AF/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2024-12-08T12:07:29.000Z">
-<meta property="article:modified_time" content="2025-01-13T01:57:16.662Z">
+<meta property="article:published_time" content="2025-01-13T01:59:46.000Z">
+<meta property="article:modified_time" content="2025-01-13T02:29:11.846Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -45,7 +45,7 @@
     
     <title>
         
-            tianyi | Tianyi&#39;s Blog
+            回溯 | Tianyi&#39;s Blog
         
     </title>
 
@@ -312,7 +312,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">tianyi</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">回溯</h1>
 			</div>
 			
 		</div>
@@ -333,15 +333,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-12-08 20:07:29</span>
-        <span class="mobile">2024-12-08 20:07:29</span>
+        <span class="desktop">2025-01-13 09:59:46</span>
+        <span class="mobile">2025-01-13 09:59:46</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-13 09:57:16</span>
-            <span class="mobile">2025-01-13 09:57:16</span>
+            <span class="desktop">2025-01-13 10:29:11</span>
+            <span class="mobile">2025-01-13 10:29:11</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -368,7 +368,29 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h2><p>I’m tianyi</p>
+			<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>chatgpt给出的回溯定义是简单来说，回溯是一种逐步尝试寻找解的过程，如果当前尝试失败，就返回上一步（即“回溯”），尝试其他可能的路径。</p>
+<h2 id="可以理解为一个进阶版的递归与树DFS的结合。核心观点1-选择DFS遍历对象2-确定约束条件，DFS变量结果不可能全部有效，我需要找到有效的部分，也就是说我们需要进行“充分剪枝”3-确定DFS遍历结束的边界，确定目标"><a href="#可以理解为一个进阶版的递归与树DFS的结合。核心观点1-选择DFS遍历对象2-确定约束条件，DFS变量结果不可能全部有效，我需要找到有效的部分，也就是说我们需要进行“充分剪枝”3-确定DFS遍历结束的边界，确定目标" class="headerlink" title="可以理解为一个进阶版的递归与树DFS的结合。核心观点1. 选择DFS遍历对象2. 确定约束条件，DFS变量结果不可能全部有效，我需要找到有效的部分，也就是说我们需要进行“充分剪枝”3. 确定DFS遍历结束的边界，确定目标"></a>可以理解为一个进阶版的递归与树DFS的结合。<br>核心观点<br>1. 选择DFS遍历对象<br>2. 确定约束条件，DFS变量结果不可能全部有效，我需要找到有效的部分，也就是说我们需要进行“充分剪枝”<br>3. 确定DFS遍历结束的边界，确定目标</h2><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="括号生成"><a href="#括号生成" class="headerlink" title="括号生成"></a>括号生成</h3><p>数字 <code>n</code> 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 <strong>有效的</strong> 括号组合。</p>
+<ul>
+<li>选择<ul>
+<li>在这里，每次最多两个选择，选左括号或右括号，“选择”会展开出一棵解的空间树。用 DFS 遍历这棵树，找出所有的解，这个过程叫回溯。</li>
+</ul>
+</li>
+<li>约束条件<ul>
+<li>即，什么情况下可以选左括号，什么情况下可以选右括号。利用约束做“剪枝”，即，去掉不会产生解的选项，即，剪去不会通往合法解的分支。比如()，现在左右括号各剩一个，再选)就成了())，不能让这个错的选择成为选项（不落入递归）：  <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (right &gt; left) &#123; <span class="comment">// 右括号剩的比较多，才能选右括号</span></span><br><span class="line">       <span class="title function_">dfs</span>(str + <span class="string">&#x27;)&#x27;</span>, left, right - <span class="number">1</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+<li>目标<ul>
+<li>当构建的长度达到 2*n，就可以结束递归（不用继续选了）。<br>答案<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string[]</span>&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> generateParenthesis = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> res = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">dfs</span> = (<span class="params">lRemain,rRemain,str</span>) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(str.<span class="property">length</span> === <span class="number">2</span> * n) &#123;</span><br><span class="line"></span><br><span class="line">            res.<span class="title function_">push</span>(str);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(lRemain &gt; <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="title function_">dfs</span>(lRemain - <span class="number">1</span>,rRemain,str + <span class="string">&quot;(&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(lRemain &lt; rRemain)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="title function_">dfs</span>(lRemain,rRemain - <span class="number">1</span>,str + <span class="string">&quot;)&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">dfs</span>(n,n,<span class="string">&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="组合总和"><a href="#组合总和" class="headerlink" title="组合总和"></a>组合总和</h3><p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 所有 <strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p>
+<p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。</p>
+<p>本题关键如何不重复剪枝：</p>
+<ul>
+<li>只要限制下一次选择的起点，是基于本次的选择，这样下一次就不会选到本次选择同层左边的数。即通过控制 for 遍历的起点，去掉会产生重复组合的选项。<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt; candidates.<span class="property">length</span>; i++) &#123; <span class="comment">// 枚举当前可选的数，从start开始 </span></span><br><span class="line">	temp.<span class="title function_">push</span>(candidates[i]); <span class="comment">// 选这个数 dfs(i, temp, sum + candidates[i]); // 基于此，继续选择，传i，下次就不会选到i左边的数 </span></span><br><span class="line">	temp.<span class="title function_">pop</span>(); <span class="comment">// 撤销选择，回到选择candidates[i]之前的状态，继续尝试选同层右边的数 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+代码<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">candidates</span></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[][]</span>&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> combinationSum = <span class="keyword">function</span>(<span class="params">candidates, target</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> res = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">dfs</span> = (<span class="params">start,temp,sum</span>) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(sum &gt;= target)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(sum === target)&#123;</span><br><span class="line"></span><br><span class="line">                res.<span class="title function_">push</span>(temp.<span class="title function_">slice</span>());</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = start;i &lt; candidates.<span class="property">length</span>;i++)&#123;</span><br><span class="line"></span><br><span class="line">            temp.<span class="title function_">push</span>(candidates[i]);</span><br><span class="line"></span><br><span class="line">            <span class="title function_">dfs</span>(i,temp,sum + candidates[i]);</span><br><span class="line"></span><br><span class="line">            temp.<span class="title function_">pop</span>()</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">dfs</span>(<span class="number">0</span>,[],<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
 
 		</div>
 
@@ -376,18 +398,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> tianyi</li>
+        <li><strong>Title:</strong> 回溯</li>
         <li><strong>Author:</strong> tianyi</li>
         <li><strong>Created at
-                :</strong> 2024-12-08 20:07:29</li>
+                :</strong> 2025-01-13 09:59:46</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-01-13 09:57:16
+                    :</strong> 2025-01-13 10:29:11
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/ztygod/2024/12/08/tianyi/
+            <strong>Link:</strong> https://github.com/ztygod/2025/01/13/回溯/
         </li>
         <li>
             <strong>
@@ -413,12 +435,12 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/01/13/%E5%9B%9E%E6%BA%AF/">
+				<a class="prev" rel="prev" href="/2025/01/13/markdown%E7%94%A8%E6%B3%95/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">回溯</span>
+						<span class="post-nav-title-item">markdown用法</span>
 						<span class="post-nav-item">Prev posts</span>
 					</span>
 				</a>
@@ -426,9 +448,9 @@
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2024/12/08/hello-world/">
+				<a class="next" rel="next" href="/2024/12/08/tianyi/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">Hello World</span>
+						<span class="post-nav-title-item">tianyi</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -492,8 +514,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">tianyi</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hello"><span class="nav-text">hello</span></a></li></ol>
+		<div class="page-title">回溯</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E7%90%86%E8%A7%A3%E4%B8%BA%E4%B8%80%E4%B8%AA%E8%BF%9B%E9%98%B6%E7%89%88%E7%9A%84%E9%80%92%E5%BD%92%E4%B8%8E%E6%A0%91DFS%E7%9A%84%E7%BB%93%E5%90%88%E3%80%82%E6%A0%B8%E5%BF%83%E8%A7%82%E7%82%B91-%E9%80%89%E6%8B%A9DFS%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A12-%E7%A1%AE%E5%AE%9A%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6%EF%BC%8CDFS%E5%8F%98%E9%87%8F%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%8F%AF%E8%83%BD%E5%85%A8%E9%83%A8%E6%9C%89%E6%95%88%EF%BC%8C%E6%88%91%E9%9C%80%E8%A6%81%E6%89%BE%E5%88%B0%E6%9C%89%E6%95%88%E7%9A%84%E9%83%A8%E5%88%86%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E2%80%9C%E5%85%85%E5%88%86%E5%89%AA%E6%9E%9D%E2%80%9D3-%E7%A1%AE%E5%AE%9ADFS%E9%81%8D%E5%8E%86%E7%BB%93%E6%9D%9F%E7%9A%84%E8%BE%B9%E7%95%8C%EF%BC%8C%E7%A1%AE%E5%AE%9A%E7%9B%AE%E6%A0%87"><span class="nav-text">可以理解为一个进阶版的递归与树DFS的结合。核心观点1. 选择DFS遍历对象2. 确定约束条件，DFS变量结果不可能全部有效，我需要找到有效的部分，也就是说我们需要进行“充分剪枝”3. 确定DFS遍历结束的边界，确定目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90"><span class="nav-text">括号生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C"><span class="nav-text">组合总和</span></a></li></ol></li></ol>
 
 	</div>
 </div>
