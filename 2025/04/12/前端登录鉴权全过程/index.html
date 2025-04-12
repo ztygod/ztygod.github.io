@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/04/05/实施编辑中的增量更新与冲突处理/"/>
+    <link rel="canonical" href="http://example.com/2025/04/12/前端登录鉴权全过程/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,15 +23,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2025/04/05/%E5%AE%9E%E6%96%BD%E7%BC%96%E8%BE%91%E4%B8%AD%E7%9A%84%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86/index.html">
+<meta property="og:title" content="前端登录鉴权全过程">
+<meta property="og:url" content="http://example.com/2025/04/12/%E5%89%8D%E7%AB%AF%E7%99%BB%E5%BD%95%E9%89%B4%E6%9D%83%E5%85%A8%E8%BF%87%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-05T03:00:36.061Z">
-<meta property="article:modified_time" content="2025-04-05T03:00:36.061Z">
+<meta property="article:published_time" content="2025-04-12T03:27:04.000Z">
+<meta property="article:modified_time" content="2025-04-12T07:19:01.651Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -45,7 +46,7 @@
     
     <title>
         
-            Tianyi&#39;s Blog - 记录学习与生活
+            前端登录鉴权全过程 | Tianyi&#39;s Blog
         
     </title>
 
@@ -391,7 +392,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">前端登录鉴权全过程</h1>
 			</div>
 			
 		</div>
@@ -412,20 +413,47 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-05 11:36</span>
-        <span class="mobile">2025-04-05 11:36</span>
+        <span class="desktop">2025-04-12 11:27:04</span>
+        <span class="mobile">2025-04-12 11:27:04</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-05 11:36</span>
-            <span class="mobile">2025-04-05 11:36</span>
+            <span class="desktop">2025-04-12 15:19:01</span>
+            <span class="mobile">2025-04-12 15:19:01</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/">工程实践</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -447,25 +475,79 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			
+			<p>在前端面试中总会遇到面试官问你前端<strong>登录鉴权</strong>是怎么做的,<code>token</code>的作用是怎么，<code>token</code>过期了怎么办之类的一些问题,那么在在这里就以我的智能协作项目(<a class="link"   target="_blank" rel="noopener" href="https://github.com/ztygod/smart-task-platform)%E5%81%9A%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95%E7%9A%84%E6%A2%B3%E7%90%86%E3%80%82" >https://github.com/ztygod/smart-task-platform)做一次简单的梳理。<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<ul>
+<li>技术栈<ul>
+<li>前端：<code>vue</code>，<code>axios</code></li>
+<li>后端：<code>nest.js</code>，<code>mysql</code>，<code>TypeORM</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="注册阶段"><a href="#注册阶段" class="headerlink" title="注册阶段"></a>注册阶段</h2><p>在一般项目中我们会输入用户名ID和密码来作为注册的凭证。</p>
+<ol>
+<li>前端获取到这两个字段，向后端发起注册请求；</li>
+<li>后端会判断ID是否已近在数据库中，<ol>
+<li>如果是则报错，前端进行消息提示；</li>
+<li>不存在则把数据存入数据库中</li>
+</ol>
+</li>
+<li>存储数据，有几个关键操作：<ol>
+<li>由于我们的密码是明文传输的，直接把密码不做任何处理存入数据库有安全风险，我们需要对密码做加密操作。。</li>
+</ol>
+</li>
+</ol>
+<p>逻辑主要集中在后端，我们来看看代码。</p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    <span class="meta">@InjectRepository</span>(User)</span></span><br><span class="line"><span class="params">    <span class="keyword">private</span> <span class="keyword">readonly</span> <span class="attr">userRepository</span>: <span class="title class_">Repository</span>&lt;<span class="title class_">User</span>&gt;</span></span><br><span class="line"><span class="params">  </span>) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">create</span>(<span class="attr">createUserDto</span>: <span class="title class_">CreateUserDto</span>): <span class="title class_">Promise</span>&lt;<span class="title class_">UserRO</span>&gt; &#123;</span><br><span class="line">    <span class="comment">//检查唯一性</span></span><br><span class="line">    <span class="keyword">const</span> &#123; username, password &#125; = createUserDto;</span><br><span class="line">    <span class="comment">// 使用 DataSource 获取 Repository 并执行查询</span></span><br><span class="line">    <span class="keyword">const</span> userRepository = dataSource.<span class="title function_">getRepository</span>(<span class="title class_">User</span>);</span><br><span class="line">    <span class="keyword">const</span> qb = <span class="keyword">await</span> userRepository.</span><br><span class="line">      <span class="title function_">createQueryBuilder</span>(<span class="string">&#x27;user&#x27;</span>)</span><br><span class="line">      .<span class="title function_">where</span>(<span class="string">&#x27;user.username = :username&#x27;</span>, &#123; username &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">await</span> qb.<span class="title function_">getOne</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">      <span class="keyword">const</span> errorMessage = &#123; <span class="attr">username</span>: <span class="string">&#x27;用户名重复&#x27;</span> &#125;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">HttpException</span>(&#123; <span class="attr">message</span>: <span class="string">&#x27;Input data validation failed&#x27;</span>, errorMessage &#125;, <span class="title class_">HttpStatus</span>.<span class="property">BAD_REQUEST</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建用户</span></span><br><span class="line">    <span class="keyword">let</span> userInstance = <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    <span class="keyword">const</span> hashedPassword = <span class="keyword">await</span> argon2.<span class="title function_">hash</span>(password);</span><br><span class="line">    userInstance.<span class="property">username</span> = username;</span><br><span class="line">    userInstance.<span class="property">password</span> = hashedPassword;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> error = <span class="keyword">await</span> <span class="title function_">validate</span>(userInstance);</span><br><span class="line">    <span class="keyword">if</span> (error.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> errorMessageFromat = &#123; <span class="attr">username</span>: <span class="string">&#x27;Userinput is not valid.&#x27;</span> &#125;;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">HttpException</span>(&#123; <span class="attr">message</span>: <span class="string">&#x27;Input data validation failed&#x27;</span>, errorMessageFromat &#125;, <span class="title class_">HttpStatus</span>.<span class="property">BAD_REQUEST</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> saveUser = <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="property">userRepository</span>.<span class="title function_">save</span>(userInstance);</span><br><span class="line">      <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">buildUserRO</span>(saveUser);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构建并返回一个格式化后的用户响应对象（userRO）</span></span><br><span class="line">   <span class="keyword">private</span> <span class="title function_">buildUserRO</span>(<span class="params"><span class="attr">user</span>: <span class="title class_">User</span></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> userRO = &#123;</span><br><span class="line">      <span class="attr">id</span>: user.<span class="property">id</span>,</span><br><span class="line">      <span class="attr">username</span>: user.<span class="property">username</span>,</span><br><span class="line">      <span class="attr">token</span>: <span class="variable language_">this</span>.<span class="title function_">generateJWT</span>(user),</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="attr">user</span>: userRO &#125;</span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 生成JWT</span></span><br><span class="line">   <span class="keyword">public</span> <span class="title function_">generateJWT</span>(<span class="params"><span class="attr">user</span>: <span class="title class_">User</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    <span class="keyword">let</span> outDate = <span class="keyword">new</span> <span class="title class_">Date</span>(date);</span><br><span class="line">    outDate.<span class="title function_">setDate</span>(date.<span class="title function_">getDate</span>() + <span class="number">60</span>) <span class="comment">//设置过期时间，60天后</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> jwt.<span class="title function_">sign</span>(&#123;</span><br><span class="line">      <span class="attr">id</span>: user.<span class="property">id</span>,</span><br><span class="line">      <span class="attr">username</span>: user.<span class="property">username</span>,</span><br><span class="line">      <span class="attr">exp</span>: outDate.<span class="title function_">getTime</span>() / <span class="number">1000</span></span><br><span class="line">    &#125;, <span class="variable constant_">SECRET</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>上面代码包括：</p>
+<ul>
+<li>检查用户名唯一性，</li>
+<li>创建用户实体，加密密码存储到数据库，</li>
+<li>根据创建时间生成JWT，设置JWT（token过期时间），</li>
+<li>构建并返回一个格式化后的用户响应对象。<br>其中后面几个操作主要用于登录流程，这里为了功能完善所以列出。</li>
+</ul>
+<h2 id="登录阶段"><a href="#登录阶段" class="headerlink" title="登录阶段"></a>登录阶段</h2><p><em>目标：通过输入用户名和密码，成功进入主页，并在前端本地存储token用作获取资源的凭证</em></p>
+<ol>
+<li>前端输入用户信息（用户名与密码），调用接口发起请求。</li>
+<li>后端根据用户ID查询数据库拿到加密后的密码，用明文密码与加密密码进行对比。</li>
+<li>对比成功后，生成JWT（token），构建并返回一个格式化的用户响应对象。</li>
+<li>前端拿到token存储在localStorage或者cookie中，当我们需要访问受限资源时，通过axios请求拦截器使请求头中带上token <strong>config.headers[‘Authorization’] &#x3D; `Bearer ${token}`;</strong></li>
+</ol>
+<p>axios.ts</p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> instance = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: <span class="string">&#x27;http://localhost:3000&#x27;</span>,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">5000</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//请求拦截器</span></span><br><span class="line">instance.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(</span><br><span class="line">    <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> token = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;authToken&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (token) &#123;</span><br><span class="line">            config.<span class="property">headers</span>[<span class="string">&#x27;Authorization&#x27;</span>] = <span class="string">`Bearer <span class="subst">$&#123;token&#125;</span>`</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> config;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error);</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+<p>user.conctroller.ts</p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Post</span>(<span class="string">&#x27;login&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">login</span>(<span class="meta">@Body</span>() <span class="attr">loginUserDto</span>: <span class="title class_">LoginUserDto</span>): <span class="title class_">Promise</span>&lt;<span class="title class_">UserRO</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> _user = <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">findOne</span>(loginUserDto);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> error = &#123; <span class="attr">user</span>: <span class="string">&#x27;not found&#x27;</span> &#125;;</span><br><span class="line">    <span class="keyword">if</span> (!_user) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">HttpException</span>(&#123; error &#125;, <span class="number">401</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> token = <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">generateJWT</span>(_user);</span><br><span class="line">    <span class="keyword">const</span> &#123; username &#125; = _user;</span><br><span class="line">    <span class="keyword">const</span> user = &#123; username, token &#125;;</span><br><span class="line">    <span class="keyword">return</span> &#123; user &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="通过中间件实现对访问受限资源的鉴权"><a href="#通过中间件实现对访问受限资源的鉴权" class="headerlink" title="通过中间件实现对访问受限资源的鉴权"></a>通过中间件实现对访问受限资源的鉴权</h2><p>上面已经讲了在对受限资源请求时带上<strong>Authorization</strong>请求头，那么服务端要做的就是在通过中间件鉴权决定是否进行响应。*(这里安利一下nest.js的中间件特别好用)*<br>下面代码大致逻辑：</p>
+<ol>
+<li>判断请求头中authorization是否存在，authorization是否带有token</li>
+<li>通过第三方库拿到生成token时所用到的user_id</li>
+<li>查询user是否存在，不存在则报错</li>
+<li>存在则执行原本操作，比如请求接口</li>
+</ol>
+<p>user.middleware.ts</p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AuthMiddleware</span> <span class="keyword">implements</span> <span class="title class_">NestMiddleware</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"><span class="keyword">private</span> <span class="keyword">readonly</span> <span class="attr">userService</span>: <span class="title class_">UserService</span></span>) &#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="title function_">use</span>(<span class="params"><span class="attr">req</span>: <span class="title class_">Request</span>, <span class="attr">res</span>: <span class="title class_">Response</span>, <span class="attr">next</span>: <span class="title class_">NextFunction</span></span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> authHeaders = req.<span class="property">headers</span>.<span class="property">authorization</span>;</span><br><span class="line">        <span class="keyword">if</span> (authHeaders &amp;&amp; (authHeaders <span class="keyword">as</span> <span class="built_in">string</span>).<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>)[<span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">const</span> token = (authHeaders <span class="keyword">as</span> <span class="built_in">string</span>).<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>)[<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">const</span> decoded = jwt.<span class="title function_">verify</span>(token, <span class="variable constant_">SECRET</span>);</span><br><span class="line">            <span class="keyword">const</span> user = <span class="keyword">await</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">findById</span>(decoded.<span class="property">id</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!user) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">HttpException</span>(<span class="string">&#x27;User not found&#x27;</span>, <span class="title class_">HttpStatus</span>.<span class="property">UNAUTHORIZED</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            req.<span class="property">user</span> = user.<span class="property">user</span>;</span><br><span class="line">            <span class="title function_">next</span>();</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">HttpException</span>(<span class="string">&#x27;Not authorized.&#x27;</span>, <span class="title class_">HttpStatus</span>.<span class="property">UNAUTHORIZED</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>我们可以选择要通过中间件的路由<br>user.module.ts</p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">TypeOrmModule</span>.<span class="title function_">forFeature</span>([<span class="title class_">User</span>])],</span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">UserController</span>],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">UserService</span>],</span><br><span class="line">  <span class="attr">exports</span>: [<span class="title class_">UserService</span>,]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserModule</span> <span class="keyword">implements</span> <span class="title class_">NestModule</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">configure</span>(<span class="params"><span class="attr">consumer</span>: <span class="title class_">MiddlewareConsumer</span></span>) &#123;</span><br><span class="line">    consumer</span><br><span class="line">      .<span class="title function_">apply</span>(<span class="title class_">AuthMiddleware</span>)</span><br><span class="line">      .<span class="title function_">forRoutes</span>(</span><br><span class="line">        &#123; <span class="attr">path</span>: <span class="string">&#x27;user&#x27;</span>, <span class="attr">method</span>: <span class="title class_">RequestMethod</span>.<span class="property">GET</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">path</span>: <span class="string">&#x27;user&#x27;</span>, <span class="attr">method</span>: <span class="title class_">RequestMethod</span>.<span class="property">PUT</span> &#125;,</span><br><span class="line">      )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>[[JWT token失效问题与解决方案.md]]</p>
+
 		</div>
 
 		
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> </li>
+        <li><strong>Title:</strong> 前端登录鉴权全过程</li>
         <li><strong>Author:</strong> tianyi</li>
         <li><strong>Created at
-                :</strong> 2025-04-05 11:00:36</li>
+                :</strong> 2025-04-12 11:27:04</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-05 11:00:36
+                    :</strong> 2025-04-12 15:19:01
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/ztygod/2025/04/05/实施编辑中的增量更新与冲突处理/
+            <strong>Link:</strong> https://github.com/ztygod/2025/04/12/前端登录鉴权全过程/
         </li>
         <li>
             <strong>
@@ -484,6 +566,14 @@
 		
 
 		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>&nbsp;
+			</li>
+			
+		</ul>
+		
 
 		
 
@@ -491,12 +581,12 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/04/06/%E5%B0%81%E8%A3%85socket%E5%9D%91%E7%82%B9/">
+				<a class="prev" rel="prev" href="/2025/04/12/JWT%20token%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">封装socket坑点</span>
+						<span class="post-nav-title-item">JWT token失效问题与解决方案</span>
 						<span class="post-nav-item">Prev posts</span>
 					</span>
 				</a>
@@ -504,9 +594,9 @@
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/04/05/%E4%B9%90%E8%A7%86%E9%94%81%E5%BA%94%E7%94%A8/">
+				<a class="next" rel="next" href="/2025/04/06/%E5%B0%81%E8%A3%85socket%E5%9D%91%E7%82%B9/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item"></span>
+						<span class="post-nav-title-item">封装socket坑点</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -570,8 +660,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title"></div>
-		
+		<div class="page-title">前端登录鉴权全过程</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%98%B6%E6%AE%B5"><span class="nav-text">注册阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E9%98%B6%E6%AE%B5"><span class="nav-text">登录阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%AE%BF%E9%97%AE%E5%8F%97%E9%99%90%E8%B5%84%E6%BA%90%E7%9A%84%E9%89%B4%E6%9D%83"><span class="nav-text">通过中间件实现对访问受限资源的鉴权</span></a></li></ol>
 
 	</div>
 </div>
