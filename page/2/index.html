@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/categories/javascript/"/>
+    <link rel="canonical" href="http://example.com/page/2/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -24,7 +24,7 @@
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/categories/JavaScript/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
     
     <title>
         
-            Category: JavaScript | Tianyi&#39;s Blog
+            Tianyi&#39;s Blog - 记录学习与生活
         
     </title>
 
@@ -121,6 +121,41 @@
 <main class="page-container" id="swup">
 
 	
+	<style>
+    .home-article-item,
+    .sidebar-links,
+    .sidebar-content,
+    a.page-number,
+    a.extend,
+    .sidebar-links .links:hover,
+    .right-bottom-tools,
+    footer.footer {
+        background-color: var(--background-color-transparent-80) !important;
+    }
+    .right-bottom-tools:hover,
+    a.page-number:hover,
+    a.extend:hover {
+        background-color: var(--primary-color) !important;
+    }
+    .site-info,
+    .home-article-sticky-label {
+        background-color: var(--background-color-transparent-15) !important;
+    }
+    .home-article-sticky-label {
+        backdrop-filter: none !important;
+    }
+    .home-banner-background {
+        filter: blur(15px);
+    }
+</style>
+
+<div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+    <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+    <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+</div>
+
+
+	
 
 	<div class="main-content-container flex flex-col justify-between min-h-dvh">
 		<div class="main-content-header">
@@ -133,9 +168,9 @@
                 </a>
             
             <a class="logo-title" href="/">
-                
+                <h1>
                 Tianyi&#39;s Blog
-                
+                </h1>
             </a>
         </div>
 
@@ -149,7 +184,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class=""
+                                <a class="active"
                                    href="/"
                                         >
                                     <i class="fa-regular fa-house fa-fw"></i>
@@ -166,7 +201,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/categories/"
                                         >
                                     <i class="fa-solid fa-magnifying-glass fa-fw"></i>
@@ -234,7 +269,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
                            href="/"
                         >
                             <span>
@@ -254,7 +289,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/categories/"
                         >
                             <span>
@@ -381,73 +416,156 @@
 
 		<div class="main-content-body transition-fade-up">
 			
-
-			<div class="main-content">
-				<div class="page-template-container">
-	
-
-	
-	<div class="category-name">
-    <i class="fa-solid fa-folder"></i>&nbsp;JavaScript
-</div>
-<div class="category-post-list">
-    
-<div class="archive-list-container">
-    
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2025</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">2</span>
-            </div>
+			<div class="home-sidebar-container">
+    <div class="sticky-container sticky">
+        
+        
             
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
-                
-                    
-                    
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='05-05'>
-                    
-                    <a href="/2025/05/05/%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">理解JS中的作用域</span>
-                    </a>
-                    
-                
-                    
+                <div class="sidebar-links">
+                    <div class="site-info">
+                        <div class="site-name">Tianyi&#39;s Blog</div>
+                        
+                    </div>
                     
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='04-26'>
+                            
+                                <a class="links" href="/archives">
+                                    
+                                        <i class="fa-regular fa-archive icon-space"></i>
+                                    
+                                    <span class="link-name">Time Line</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/tags">
+                                    
+                                        <i class="fa-regular fa-tags icon-space"></i>
+                                    
+                                    <span class="link-name">Tags</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/categories">
+                                    
+                                        <i class="fa-regular fa-folder icon-space"></i>
+                                    
+                                    <span class="link-name">Categories</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/essays">
+                                    
+                                        <i class="fa-regular fa-comment icon-space"></i>
+                                    
+                                    <span class="link-name">Shuo Shuo</span>
+                                </a>
+                            
+                        
                     
-                    <a href="/2025/04/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0/" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">深入理解JS中的异步函数</span>
-                    </a>
-                    
-                
-                </li> <!-- Ensure the last item is properly closed -->
-            </ul>
-        </section>
+                </div>
+            
+            <div class="sidebar-content"  marginTop >
+                <div class="avatar flex justify-center">
+    <img src="/images/image.png">
+</div>
+                <div class="author flex flex-col justify-center my-2.5 mx-0">
+    <div class="name">tianyi</div>
+    
+        <div class="label">Lv2</div>
     
 </div>
+                <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">11</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+            </div>
+        
+
+    </div>
 </div>
 
-	
+			
 
-	<div class="page-template-content markdown-body">
-		
+			<div class="main-content">
+				<div class="home-content-container">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
 
-		
-	</div>
+                
 
-	<div class="page-template-comments">
-		
-	</div>
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/08/tianyi/">
+                            tianyi
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            helloI’m tianyi
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Dec 08 2024 20:07:29 GMT+0800">
+                
+                    2024-12-08
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%87%AA%E6%88%91/">自我</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/08/tianyi/">Read more<span class="seo-reader-text">tianyi</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-<div class="paginator">
-	<span class="page-number current">1</span>
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator px-7 py-5">
+        <div class="paginator">
+	<a class="extend prev" rel="prev" href="/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
 </div>
   
+    </div>
+</div>
+
 			</div>
 
 			
@@ -607,6 +725,7 @@
         containers: ["#swup"],
     });
 </script>
+
 
 
 
