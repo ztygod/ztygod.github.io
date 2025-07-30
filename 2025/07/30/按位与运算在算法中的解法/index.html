@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/04/26/深入理解tcp协议/"/>
+    <link rel="canonical" href="http://example.com/2025/07/30/按位与运算在算法中的解法/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,14 +23,14 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入理解TCP协议">
-<meta property="og:url" content="http://example.com/2025/04/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3TCP%E5%8D%8F%E8%AE%AE/index.html">
+<meta property="og:title" content="按位与运算在算法中的解法">
+<meta property="og:url" content="http://example.com/2025/07/30/%E6%8C%89%E4%BD%8D%E4%B8%8E%E8%BF%90%E7%AE%97%E5%9C%A8%E7%AE%97%E6%B3%95%E4%B8%AD%E7%9A%84%E8%A7%A3%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-26T03:10:04.000Z">
-<meta property="article:modified_time" content="2025-04-26T03:24:17.437Z">
+<meta property="article:published_time" content="2025-07-30T01:47:40.000Z">
+<meta property="article:modified_time" content="2025-07-30T01:53:51.531Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
     
     <title>
         
-            深入理解TCP协议 | Tianyi&#39;s Blog
+            按位与运算在算法中的解法 | Tianyi&#39;s Blog
         
     </title>
 
@@ -392,7 +392,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">深入理解TCP协议</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">按位与运算在算法中的解法</h1>
 			</div>
 			
 		</div>
@@ -413,15 +413,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-26 11:10:04</span>
-        <span class="mobile">2025-04-26 11:10:04</span>
+        <span class="desktop">2025-07-30 09:47:40</span>
+        <span class="mobile">2025-07-30 09:47:40</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-26 11:24:17</span>
-            <span class="mobile">2025-04-26 11:24:17</span>
+            <span class="desktop">2025-07-30 09:53:51</span>
+            <span class="mobile">2025-07-30 09:53:51</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -435,7 +435,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
                         </li>
                     
                     
@@ -475,26 +475,44 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>tcp作为http的底层协议，开发中必不可少，但是由于我们更加关注的http导致我们对tcp了解的并不多，这里我们对tcp做个梳理，包括tcp的头部的结构，可靠传输，流量控制，拥塞控制机制，http与tcp是怎么交互的的内容。</p>
-
+			<blockquote>
+<p>题目参考: <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-subarray-with-maximum-bitwise-and/description/?envType=daily-question&envId=2025-07-30" >https://leetcode.cn/problems/longest-subarray-with-maximum-bitwise-and/description/?envType=daily-question&amp;envId=2025-07-30<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给你一个长度为 n 的整数数组 nums 。考虑 nums 中进行 按位与（bitwise AND）运算得到的值 最大 的 非空 子数组。换句话说，令 k 是 nums 任意 子数组执行按位与运算所能得到的最大值。那么，只需要考虑那些执行一次按位与运算后等于 k 的子数组。</p>
+<ul>
+<li><p>返回满足要求的 最长 子数组的长度。</p>
+</li>
+<li><p>数组的按位与就是对数组中的所有数字进行按位与运算。</p>
+</li>
+<li><p>子数组 是数组中的一个连续元素序列。</p>
+</li>
+</ul>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>AND（&amp;）运算的性质是，参与 AND 运算的元素越多，AND 结果越小（不会变得更大）比如 3 &amp; 2&#x3D;2，3 &amp; 2 &amp; 1&#x3D;0。<strong>所以我们通过 AND 运算能得到的最大值，就是 nums 的最大值 mx</strong>。</p>
+<ul>
+<li>多个相同 mx 计算 AND，结果仍然是 mx；</li>
+<li>而 mx 与另一个小于 mx 的数计算 AND，结果会小于 mx。</li>
+</ul>
+<p><strong>所以问题变成：计算 nums 的最长连续子数组的长度，该子数组只包含 mx</strong>。</p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>遍历即可：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longestSubarray = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> mx = <span class="title class_">Math</span>.<span class="title function_">max</span>(...nums);</span><br><span class="line">    <span class="keyword">let</span> ans = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> x <span class="keyword">of</span> nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x === mx) &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            ans = <span class="title class_">Math</span>.<span class="title function_">max</span>(ans, cnt);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cnt = <span class="number">0</span>; <span class="comment">// 连续 mx 断开了，重新统计</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 		</div>
 
 		
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 深入理解TCP协议</li>
+        <li><strong>Title:</strong> 按位与运算在算法中的解法</li>
         <li><strong>Author:</strong> tianyi</li>
         <li><strong>Created at
-                :</strong> 2025-04-26 11:10:04</li>
+                :</strong> 2025-07-30 09:47:40</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-26 11:24:17
+                    :</strong> 2025-07-30 09:53:51
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/ztygod/2025/04/26/深入理解TCP协议/
+            <strong>Link:</strong> https://github.com/ztygod/2025/07/30/按位与运算在算法中的解法/
         </li>
         <li>
             <strong>
@@ -527,23 +545,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/05/05/%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">理解JS中的作用域</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/04/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0/">
+				<a class="next" rel="next" href="/2025/07/29/%E4%BD%8D%E8%BF%90%E7%AE%97LogTrick/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">深入理解JS中的异步函数</span>
+						<span class="post-nav-title-item">位运算LogTrick</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -607,8 +613,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">深入理解TCP协议</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a></li></ol>
+		<div class="page-title">按位与运算在算法中的解法</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-text">解法</span></a></li></ol>
 
 	</div>
 </div>
