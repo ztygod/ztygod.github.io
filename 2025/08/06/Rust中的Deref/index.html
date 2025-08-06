@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/06/28/2025暑期计划/"/>
+    <link rel="canonical" href="http://example.com/2025/08/06/rust中的deref/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,15 +23,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2025暑期计划">
-<meta property="og:url" content="http://example.com/2025/06/28/2025%E6%9A%91%E6%9C%9F%E8%AE%A1%E5%88%92/index.html">
+<meta property="og:title" content="Rust中的Deref">
+<meta property="og:url" content="http://example.com/2025/08/06/Rust%E4%B8%AD%E7%9A%84Deref/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-06-28T03:09:11.000Z">
-<meta property="article:modified_time" content="2025-06-29T03:30:11.019Z">
+<meta property="article:published_time" content="2025-08-06T09:28:32.000Z">
+<meta property="article:modified_time" content="2025-08-06T11:58:12.545Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Rust">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -45,7 +46,7 @@
     
     <title>
         
-            2025暑期计划 | Tianyi&#39;s Blog
+            Rust中的Deref | Tianyi&#39;s Blog
         
     </title>
 
@@ -391,7 +392,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">2025暑期计划</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Rust中的Deref</h1>
 			</div>
 			
 		</div>
@@ -412,20 +413,47 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-06-28 11:09:11</span>
-        <span class="mobile">2025-06-28 11:09:11</span>
+        <span class="desktop">2025-08-06 17:28:32</span>
+        <span class="mobile">2025-08-06 17:28:32</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-06-29 11:30:11</span>
-            <span class="mobile">2025-06-29 11:30:11</span>
+            <span class="desktop">2025-08-06 19:58:12</span>
+            <span class="mobile">2025-08-06 19:58:12</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Rust/">Rust</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Rust/">Rust</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -447,22 +475,45 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h1><h2 id="2025上半年总结"><a href="#2025上半年总结" class="headerlink" title="2025上半年总结"></a>2025上半年总结</h2><blockquote>
-<p>达成目标：实习，开源，开源之下</p>
-</blockquote>
-<h2 id="2025下半年计划"><a href="#2025下半年计划" class="headerlink" title="2025下半年计划"></a>2025下半年计划</h2><p>下半年不会在急于找实习，现在已经有两端大厂实习，如果不是顶尖大厂的顶尖部门或者含金量更高的业务，实习已经不会有更多的加成了，接下来应更加关注个人技术的进步和视野的拓展，还有综合素质的发展。距离秋招只有一年，这是我唯一的机会了，加油勉励。</p>
-<p>下半年重点：</p>
+			<h2 id="Deref-（解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。-Deref-可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如-T，即-智能指针（Smart-Pointer）自动解引用-Drop-允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用-方法查找）"><a href="#Deref-（解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。-Deref-可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如-T，即-智能指针（Smart-Pointer）自动解引用-Drop-允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用-方法查找）" class="headerlink" title="Deref （解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。- Deref 可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如 T，即*智能指针（Smart Pointer）自动解引用- Drop 允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用 + 方法查找）
+  "></a><strong>Deref （解引用）</strong>是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。<br>- Deref 可以让智能指针像引用那样工作，这样你就可以写出同时<strong>支持智能指针和引用</strong>的代码，例如 <em>T，即*<em>智能指针（Smart Pointer）自动解引用</em></em><br>- Drop 允许你<strong>指定智能指针超出作用域后自动执行的代码</strong>，例如做一些数据清除等收尾工作，<strong>即方法自动调用（自动解引用 + 方法查找）</strong>
+  </h2><h2 id="常规解引用"><a href="#常规解引用" class="headerlink" title="常规解引用"></a>常规解引用</h2><p>在讲智能指针解引用前，我们先来看看一般的解引用。引用是对一个变量值的内存地址的引用，解引用那就是通过内存地址获取到值。</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">y</span> = &amp;x;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">assert_eq!</span>(<span class="number">5</span>, x);</span><br><span class="line">    <span class="built_in">assert_eq!</span>(<span class="number">5</span>, *y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>y 就是一个常规引用，包含了值 5 所在的内存地址，然后通过解引用 *y，我们获取到了值 5。</p>
+<hr>
+<h2 id="智能指针解引用"><a href="#智能指针解引用" class="headerlink" title="智能指针解引用"></a>智能指针解引用</h2><p>当引用的是一个值的时候，我们可以直接 “*y”解引用拿到内存地址上的值，那如果引用的是一个结构体的话，直接进行解引用，编译器可能会束手无策，因此我们可以为智能指针结构体实现Deref特征。</p>
+<p>实现 Deref 后的智能指针结构体（<code>智能指针往往是基于结构体实现，它与我们自定义的结构体最大的区别在于它实现了 Deref 和 Drop 特征</code>），就可以像普通引用一样，通过 * 进行解引用，例如 Box<T> 智能指针。</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">sum</span> = *x + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>智能指针 x 被 * 解引用为 i32 类型的值 1，然后再进行求和。</p>
+<h3 id="我们可以来定义自己的智能指针"><a href="#我们可以来定义自己的智能指针" class="headerlink" title="我们可以来定义自己的智能指针"></a>我们可以来定义自己的智能指针</h3><div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">MyBox</span>&lt;T&gt;(T);</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T&gt; MyBox&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(x: T) <span class="punctuation">-&gt;</span> MyBox&lt;T&gt; &#123;</span><br><span class="line">        <span class="title function_ invoke__">MyBox</span>(x)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 为智能指针实现 Deref 特征</span></span><br><span class="line"><span class="keyword">use</span> std::ops::Deref;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T&gt; Deref <span class="keyword">for</span> <span class="title class_">MyBox</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">type</span> <span class="title class_">Target</span> = T;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">deref</span>(&amp;<span class="keyword">self</span>) <span class="punctuation">-&gt;</span> &amp;<span class="keyword">Self</span>::Target &#123;</span><br><span class="line">        &amp;<span class="keyword">self</span>.<span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>当解引用 MyBox 智能指针时，返回元组结构体中的元素 &amp;self.0</p>
+<h3 id="“-“-背后的原理"><a href="#“-“-背后的原理" class="headerlink" title="“ * “ 背后的原理"></a>“ * “ 背后的原理</h3><p>当我们使用智能指针Box进行解引用的时候，实际上是执行了</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(y.<span class="title function_ invoke__">deref</span>())</span><br></pre></td></tr></table></figure></div>
+<p>deref 方法返回值的<strong>常规引用</strong>，然后通过 * 对常规引用进行解引用，最终获取到目标值。</p>
+<p>为什么要用这种看起来麻烦的方法，原因在于<strong>所有权系统</strong>的存在。如果 deref 方法直接返回一个值，而不是引用，那么<strong>该值的所有权将被转移给调用者</strong>，而我们不希望调用者仅仅只是 *T 一下，就拿走了智能指针中包含的值。</p>
+<h2 id="函数和方法中的Deref隐式转换（方法的自动调用）"><a href="#函数和方法中的Deref隐式转换（方法的自动调用）" class="headerlink" title="函数和方法中的Deref隐式转换（方法的自动调用）"></a>函数和方法中的Deref隐式转换（方法的自动调用）</h2><p>对于函数的传参，rust实现了一个及其方便的隐式转换：<code>Deref 隐式转换</code>。若一个类型实现了Deref 特征，那它的<code>引用</code>在传给函数或方法时，会根据<code>参数签名</code>来决定是否进行<code>隐式的 Deref 转换</code>，例如:</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    <span class="title function_ invoke__">display</span>(&amp;s)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">display</span>(s: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>,s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>这个有几点需要注意：</p>
 <ul>
-<li>找准一个方向不断深入，目前定为rust方面在前端的应用，包括工程化，wasm，这应该成为秋招中我的一个核心竞争力的输出点</li>
-<li>参加开源活动，难度最大同时也是上限最高的一个方式。参加开源活动，成为核心贡献者，拓宽技术应用场景，丰富个人经历。</li>
+<li>String 实现了 <code>Deref 特征</code>，可以在需要时自动被转换为 <code>&amp;str</code> 类型</li>
+<li>&amp;s 是一个 &amp;String 类型，<strong>当它被传给 display 函数时，自动通过 Deref 转换成了 &amp;str</strong></li>
+<li>必须使用 &amp;s 的方式来触发 Deref(<strong>仅引用类型的实参才会触发自动解引用</strong>)</li>
 </ul>
-<h2 id="小计划（暑期）"><a href="#小计划（暑期）" class="headerlink" title="小计划（暑期）"></a>小计划（暑期）</h2><ul>
-<li><input disabled="" type="checkbox"> 完成开源之夏项目，三个月时间，尽心尽力完成，做完写到简历上很有含金量，还有12000的奖金。</li>
-<li><input disabled="" type="checkbox"> rust高级特性，输出博客不少于15篇，熟练编写rust，掌握应达到高级水平（类似于八股深入进行思考）</li>
-<li><input disabled="" type="checkbox"> 每天一道算法，总结特点，输出博客一个月不少于10篇</li>
-<li><input disabled="" type="checkbox"> 参加开源，成为一个项目的核心贡献者（metachat，vtable，tiny-engine）每天拿出时间参加开源</li>
-<li><input checked="" disabled="" type="checkbox"> 君子不器，看一些高分电影，阅读，锻炼<br>此外😁<br>炉石上个传说，ow上个白金，ff14主线推完，博德之门3推完，夏日口袋推完，命运石之门推完</li>
+<h3 id="连续的隐式-Deref-转换"><a href="#连续的隐式-Deref-转换" class="headerlink" title="连续的隐式 Deref 转换"></a>连续的隐式 Deref 转换</h3><p>Deref不仅仅可以进行一次隐式转换，还可以进行连续的隐式 Deref 转换，如下：</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = MyBox::<span class="title function_ invoke__">new</span>(<span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>));</span><br><span class="line">    <span class="title function_ invoke__">display</span>(&amp;s)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">display</span>(s: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>,s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>我们使用了之前自定义的智能指针 MyBox，并将其通过<code>连续的隐式转换变成 &amp;str 类型</code>：首先 MyBox 被 Deref 成 String 类型，结果并不能满足 display 函数参数的要求，编译器发现 String 还可以继续 Deref 成 &amp;str，最终成功的匹配了函数参数。</p>
+<hr>
+<h2 id="Deref-可变引用的转换"><a href="#Deref-可变引用的转换" class="headerlink" title="Deref 可变引用的转换"></a>Deref 可变引用的转换</h2><p>刚刚讲的都是不可变引用的转换，实际上Deref也存在可变引用的转换，实际上，Deref的转换规则有三个：</p>
+<ul>
+<li>当 T: Deref&lt;Target&#x3D;U&gt;，可以将 &amp;T 转换成 &amp;U，也就是我们之前看到的例子</li>
+<li>当 T: DerefMut&lt;Target&#x3D;U&gt;，可以将 &amp;mut T 转换成 &amp;mut U</li>
+<li>当 T: Deref&lt;Target&#x3D;U&gt;，可以将 &amp;mut T 转换成 &amp;U</li>
 </ul>
+<p>关于DerefMut的例子：</p>
+<div class="code-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">MyBox</span>&lt;T&gt; &#123;</span><br><span class="line">    v: T,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T&gt; MyBox&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(x: T) <span class="punctuation">-&gt;</span> MyBox&lt;T&gt; &#123;</span><br><span class="line">        MyBox &#123; v: x &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> std::ops::Deref;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T&gt; Deref <span class="keyword">for</span> <span class="title class_">MyBox</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">type</span> <span class="title class_">Target</span> = T;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">deref</span>(&amp;<span class="keyword">self</span>) <span class="punctuation">-&gt;</span> &amp;<span class="keyword">Self</span>::Target &#123;</span><br><span class="line">        &amp;<span class="keyword">self</span>.v</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> std::ops::DerefMut;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T&gt; DerefMut <span class="keyword">for</span> <span class="title class_">MyBox</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">deref_mut</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) <span class="punctuation">-&gt;</span> &amp;<span class="keyword">mut</span> <span class="keyword">Self</span>::Target &#123;</span><br><span class="line">        &amp;<span class="keyword">mut</span> <span class="keyword">self</span>.v</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = MyBox::<span class="title function_ invoke__">new</span>(<span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello, &quot;</span>));</span><br><span class="line">    <span class="title function_ invoke__">display</span>(&amp;<span class="keyword">mut</span> s)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">display</span>(s: &amp;<span class="keyword">mut</span> <span class="type">String</span>) &#123;</span><br><span class="line">    s.<span class="title function_ invoke__">push_str</span>(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>一个类型为 T 的对象 foo，如果 T: Deref&lt;Target&#x3D;U&gt;，那么，相关 foo 的引用 &amp;foo 在应用的时候会自动转换为 &amp;U</strong></p>
 
 		</div>
 
@@ -470,18 +521,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 2025暑期计划</li>
+        <li><strong>Title:</strong> Rust中的Deref</li>
         <li><strong>Author:</strong> tianyi</li>
         <li><strong>Created at
-                :</strong> 2025-06-28 11:09:11</li>
+                :</strong> 2025-08-06 17:28:32</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-06-29 11:30:11
+                    :</strong> 2025-08-06 19:58:12
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/ztygod/2025/06/28/2025暑期计划/
+            <strong>Link:</strong> https://github.com/ztygod/2025/08/06/Rust中的Deref/
         </li>
         <li>
             <strong>
@@ -500,29 +551,25 @@
 		
 
 		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Rust/">#Rust</a>&nbsp;
+			</li>
+			
+		</ul>
+		
 
 		
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/07/11/%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E6%B1%82%E5%85%A5%E7%8E%AF%E7%82%B9/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">链表有环，如何求入环点</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/05/05/%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+				<a class="next" rel="next" href="/2025/08/06/%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AEIII/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">理解JS中的作用域</span>
+						<span class="post-nav-title-item">水果成篮III</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -586,8 +633,9 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">2025暑期计划</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E5%88%92"><span class="nav-text">计划</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025%E4%B8%8A%E5%8D%8A%E5%B9%B4%E6%80%BB%E7%BB%93"><span class="nav-text">2025上半年总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025%E4%B8%8B%E5%8D%8A%E5%B9%B4%E8%AE%A1%E5%88%92"><span class="nav-text">2025下半年计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E8%AE%A1%E5%88%92%EF%BC%88%E6%9A%91%E6%9C%9F%EF%BC%89"><span class="nav-text">小计划（暑期）</span></a></li></ol></li></ol>
+		<div class="page-title">Rust中的Deref</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deref-%EF%BC%88%E8%A7%A3%E5%BC%95%E7%94%A8%EF%BC%89%E6%98%AFrust%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95%EF%BC%8C%E7%94%A8%E5%BE%97%E5%A5%BD%E5%8F%AF%E4%BB%A5%E8%AE%A9%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E4%BC%98%E9%9B%85%E3%80%81%E6%A8%A1%E5%9D%97%E6%9B%B4%E6%B8%85%E6%99%B0%E3%80%81%E6%80%A7%E8%83%BD%E6%9B%B4%E9%AB%98%E3%80%82-Deref-%E5%8F%AF%E4%BB%A5%E8%AE%A9%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%83%8F%E5%BC%95%E7%94%A8%E9%82%A3%E6%A0%B7%E5%B7%A5%E4%BD%9C%EF%BC%8C%E8%BF%99%E6%A0%B7%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%86%99%E5%87%BA%E5%90%8C%E6%97%B6%E6%94%AF%E6%8C%81%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%8C%E4%BE%8B%E5%A6%82-T%EF%BC%8C%E5%8D%B3-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%EF%BC%88Smart-Pointer%EF%BC%89%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%BC%95%E7%94%A8-Drop-%E5%85%81%E8%AE%B8%E4%BD%A0%E6%8C%87%E5%AE%9A%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E8%B6%85%E5%87%BA%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%90%8E%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%8C%E4%BE%8B%E5%A6%82%E5%81%9A%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E6%B8%85%E9%99%A4%E7%AD%89%E6%94%B6%E5%B0%BE%E5%B7%A5%E4%BD%9C%EF%BC%8C%E5%8D%B3%E6%96%B9%E6%B3%95%E8%87%AA%E5%8A%A8%E8%B0%83%E7%94%A8%EF%BC%88%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%BC%95%E7%94%A8-%E6%96%B9%E6%B3%95%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="nav-text">Deref （解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。- Deref 可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如 T，即*智能指针（Smart Pointer）自动解引用- Drop 允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用 + 方法查找）
+  </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%84%E8%A7%A3%E5%BC%95%E7%94%A8"><span class="nav-text">常规解引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E8%A7%A3%E5%BC%95%E7%94%A8"><span class="nav-text">智能指针解引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%9D%A5%E5%AE%9A%E4%B9%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="nav-text">我们可以来定义自己的智能指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C-%E2%80%9C-%E8%83%8C%E5%90%8E%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-text">“ * “ 背后的原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%92%8C%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84Deref%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%EF%BC%88%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E8%B0%83%E7%94%A8%EF%BC%89"><span class="nav-text">函数和方法中的Deref隐式转换（方法的自动调用）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E7%9A%84%E9%9A%90%E5%BC%8F-Deref-%E8%BD%AC%E6%8D%A2"><span class="nav-text">连续的隐式 Deref 转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deref-%E5%8F%AF%E5%8F%98%E5%BC%95%E7%94%A8%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-text">Deref 可变引用的转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
 
 	</div>
 </div>
