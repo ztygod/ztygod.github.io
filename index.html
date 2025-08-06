@@ -580,7 +580,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">22</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -666,7 +666,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">22</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -691,6 +691,74 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
+                        <a href="/2025/08/06/Rust%E4%B8%AD%E7%9A%84Box-T-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/">
+                            Rust中的Box&lt;T&gt;智能指针
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Aug 06 2025 20:02:08 GMT+0800">
+                
+                    2025-08-06
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Rust/">Rust</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Rust/">Rust</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2025/08/06/Rust%E4%B8%AD%E7%9A%84Box-T-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/">Read more<span class="seo-reader-text">Rust中的Box&lt;T&gt;智能指针</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
                         <a href="/2025/08/06/Rust%E4%B8%AD%E7%9A%84Deref/">
                             Rust中的Deref
                         </a>
@@ -699,8 +767,7 @@ mjx-container[display="true"] + br {
                     <div class="home-article-content markdown-body">
                         
                             
-                            Deref （解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。- Deref 可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如 T，即*智能指针（Smart Pointer）自动解引用- Drop 允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用 + 方法查找）
-  常...
+                            说在最前面Deref （解引用）是rust中的一个高级用法，用得好可以让你的代码更优雅、模块更清晰、性能更高。- Deref 可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如 T，即*智能指针（Smart Pointer）自动解引用- Drop 允许你指定智能指针超出作用域后自动执行的代码，例如做一些数据清除等收尾工作，即方法自动调用（自动解引用 + 方法查找...
                         
                     </div>
 
@@ -1356,79 +1423,6 @@ String1String::from(&quot;hello,world&quot;);
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2025/07/11/%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E6%B1%82%E5%85%A5%E7%8E%AF%E7%82%B9/">
-                            链表有环，如何求入环点
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            
-题目参考：https://leetcode.cn/problems/linked-list-cycle-ii/description/题目大致意思为，给定一个链表的头节点  head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
-
-思路我们可以利用快慢指针加公式推导得出一个及其简洁的表达式，进而得到答案。
-
-我们设定两个快慢指针，慢指针一次移动一个节点，快指针一次移动...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Jul 11 2025 11:14:41 GMT+0800">
-                
-                    2025-07-11
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2025/07/11/%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E6%B1%82%E5%85%A5%E7%8E%AF%E7%82%B9/">Read more<span class="seo-reader-text">链表有环，如何求入环点</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1459,7 +1453,7 @@ String1String::from(&quot;hello,world&quot;);
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        21 posts in total
+                        22 posts in total
                     </span>
                     
                 </p>
