@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-08-10T02:01:05.000Z">
-<meta property="article:modified_time" content="2025-08-10T02:13:53.796Z">
+<meta property="article:modified_time" content="2025-08-10T02:15:43.609Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="位运算">
@@ -534,8 +534,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-08-10 10:13:53</span>
-            <span class="mobile">2025-08-10 10:13:53</span>
+            <span class="desktop">2025-08-10 10:15:43</span>
+            <span class="mobile">2025-08-10 10:15:43</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -611,9 +611,10 @@ mjx-container[display="true"] + br {
 </ul>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>由于2的幂在10^9之中是可数的且是有限的，如果我们将这些<code>2的幂全部记录下来</code>，并且统计每个数他所含的数字有多少个（如 一个1，三个2等等），记录到哈希表中，我们再判断函数<code>所传的数字分别有多少个数字</code>，是否在我们的哈希表中，即可得到答案。</p>
 <p>由于 2^29&lt;10^9&lt;2^30 ，因此在 [1,10^9] 范围内有 2^0,2^1,⋯,2^29一共 30 个 2 的幂。对这 30 个数的每个数，<strong>我们可以预处理其十进制表示的字符数组中从 0 到 9 每个字符的出现次数</strong>，记在一个长度为 10 的数组中，<strong>并用一哈希表记录这些数组</strong>。对于数字 n，我们同样统计其十进制表示的字符数组中从 0 到 9 每个字符的出现次数，然后去哈希表中查找，若存在则说明 n 可以通过重排得到 2 的幂，否则不能。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><div class="code-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countDigits</span> = (<span class="params">n</span>) =&gt; {</span><br><span class="line">    <span class="keyword">const</span> cnt = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (n) {</span><br><span class="line">        cnt[n % <span class="number">10</span>]++;</span><br><span class="line">        n = <span class="title class_">Math</span>.<span class="title function_">floor</span>(n / <span class="number">10</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> cnt.<span class="title function_">join</span>(<span class="string">''</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reorderedPowerOf2 = <span class="keyword">function</span>(<span class="params">n</span>) {</span><br><span class="line">    <span class="keyword">const</span> powerOf2Digits = <span class="keyword">new</span> <span class="title class_">Set</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">1</span>; n &lt;= <span class="number">1e9</span>; n &lt;&lt;= <span class="number">1</span>) {</span><br><span class="line">        powerOf2Digits.<span class="title function_">add</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> powerOf2Digits.<span class="title function_">has</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">};</span><br></pre></td></tr></table></figure></div>
-
-
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>从 1 开始，不断乘 2（n &lt;&lt;= 1 等价于 n *= 2），直到超过 1e9（题目范围内的最大数）。</li>
+<li>把每个 2 的幂的“数字计数表示”存进 Set（去重、快速查找）。<div class="code-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countDigits</span> = (<span class="params">n</span>) =&gt; {</span><br><span class="line">    <span class="keyword">const</span> cnt = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (n) {</span><br><span class="line">        cnt[n % <span class="number">10</span>]++;</span><br><span class="line">        n = <span class="title class_">Math</span>.<span class="title function_">floor</span>(n / <span class="number">10</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> cnt.<span class="title function_">join</span>(<span class="string">''</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reorderedPowerOf2 = <span class="keyword">function</span>(<span class="params">n</span>) {</span><br><span class="line">    <span class="keyword">const</span> powerOf2Digits = <span class="keyword">new</span> <span class="title class_">Set</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">1</span>; n &lt;= <span class="number">1e9</span>; n &lt;&lt;= <span class="number">1</span>) {</span><br><span class="line">        powerOf2Digits.<span class="title function_">add</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> powerOf2Digits.<span class="title function_">has</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">};</span><br></pre></td></tr></table></figure></div></li>
+</ul>
 
 		</div>
 
@@ -628,7 +629,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-08-10 10:13:53
+                    :</strong> 2025-08-10 10:15:43
             </li>
         
         <li>
