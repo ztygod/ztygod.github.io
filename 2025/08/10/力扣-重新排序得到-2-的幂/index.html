@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/04/26/深入理解js中的异步函数/"/>
+    <link rel="canonical" href="http://example.com/2025/08/10/力扣-重新排序得到-2-的幂/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,16 +23,18 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入理解JS中的异步函数">
-<meta property="og:url" content="http://example.com/2025/04/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="力扣-重新排序得到 2 的幂">
+<meta property="og:url" content="http://example.com/2025/08/10/%E5%8A%9B%E6%89%A3-%E9%87%8D%E6%96%B0%E6%8E%92%E5%BA%8F%E5%BE%97%E5%88%B0-2-%E7%9A%84%E5%B9%82/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-26T02:46:35.000Z">
-<meta property="article:modified_time" content="2025-04-26T02:59:10.526Z">
+<meta property="article:published_time" content="2025-08-10T02:01:05.000Z">
+<meta property="article:modified_time" content="2025-08-10T02:13:53.796Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="学习">
+<meta property="article:tag" content="位运算">
+<meta property="article:tag" content="哈希表">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -46,7 +48,7 @@
     
     <title>
         
-            深入理解JS中的异步函数 | Tianyi&#39;s Blog
+            力扣-重新排序得到 2 的幂 | Tianyi&#39;s Blog
         
     </title>
 
@@ -105,7 +107,119 @@
     
     
     
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 
@@ -392,7 +506,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">深入理解JS中的异步函数</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">力扣-重新排序得到 2 的幂</h1>
 			</div>
 			
 		</div>
@@ -413,15 +527,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-26 10:46:35</span>
-        <span class="mobile">2025-04-26 10:46:35</span>
+        <span class="desktop">2025-08-10 10:01:05</span>
+        <span class="mobile">2025-08-10 10:01:05</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-26 10:59:10</span>
-            <span class="mobile">2025-04-26 10:59:10</span>
+            <span class="desktop">2025-08-10 10:13:53</span>
+            <span class="mobile">2025-08-10 10:13:53</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -435,7 +549,7 @@
                     
                         
                         <li>
-                            <a href="/categories/JavaScript/">JavaScript</a>&nbsp;
+                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
                         </li>
                     
                     
@@ -450,6 +564,14 @@
                 
                     <li>
                         <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>&nbsp;
                     </li>
                 
             </ul>
@@ -475,100 +597,23 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h3 id="首先明确一点，-异步函数不等于微任务-。"><a href="#首先明确一点，-异步函数不等于微任务-。" class="headerlink" title="首先明确一点，&#x3D;&#x3D;异步函数不等于微任务&#x3D;&#x3D;。"></a>首先明确一点，&#x3D;&#x3D;异步函数不等于微任务&#x3D;&#x3D;。</h3><ol>
-<li><p>异步任务是JavaScript中一种在执行过程中<strong>不阻塞主线程的函数</strong>，一般用于处理耗时操作，比如网络请求，最后<strong>返回的是一个promise对象</strong>；</p>
-</li>
-<li><p>而微任务则是JavaScript事件循环的一种任务类型，主要用于<strong>处理 Promise 的回调</strong>和 <strong>MutationObserver 的回调</strong>；并且拥有比宏任务更高的优先级，事件循环会首先处理所有微任务，然后再处理宏任务</p>
-</li>
-</ol>
+			<blockquote>
+<p>题目链接：<a class="link" target="_blank" rel="noopener" href="https://leetcode.cn/problems/reordered-power-of-2/description/?envType=daily-question&envId=2025-08-10">https://leetcode.cn/problems/reordered-power-of-2/description/?envType=daily-question&amp;envId=2025-08-10<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定正整数 n ，我们按任何顺序（包括原始顺序）将数字重新排序，注意其前导数字不能为零。如果我们可以通过上述方式得到 2 的幂，返回 true；否则，返回 false。</p>
 <ul>
-<li>二者联系：<strong>异步函数会返回一个promise，而promise中的回调则是我们的微任务</strong>；而对于async和await，await关键字会暂停函数的执行，直到promise被解析或拒绝，这个过程中await后面的代码会被放入微任务队列中。</li>
-</ul>
-<p>那异步函数到底是怎么执行的呢</p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个函数来获取用户数据</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fetchUserData</span>(<span class="params">userId</span>) &#123;</span><br><span class="line">    <span class="comment">// 使用 fetch API 发起请求</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fetch</span>(<span class="string">`https://jsonplaceholder.typicode.com/users/<span class="subst">$&#123;userId&#125;</span>`</span>)</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 检查响应是否成功</span></span><br><span class="line">            <span class="keyword">if</span> (!response.<span class="property">ok</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Network response was not ok&#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 返回解析后的 JSON 数据</span></span><br><span class="line">            <span class="keyword">return</span> response.<span class="title function_">json</span>();</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数并处理返回的 Promise</span></span><br><span class="line"><span class="title function_">fetchUserData</span>(<span class="number">1</span>)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">userData</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 输出用户数据</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;User Data:&#x27;</span>, userData);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 处理错误</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;There was a problem with the fetch operation:&#x27;</span>, error);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 主线程继续执行其他代码</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Fetching user data...&#x27;</span>);</span><br></pre></td></tr></table></figure></div>
-<p>在 JavaScript 中，<strong>执行栈Call Stack</strong>和 <strong>任务队列Task Queue</strong>是理解异步操作执行机制的关键。我们可以通过分析上面提供的代码来了解它是如何执行的。</p>
-<h3 id="执行流程解析"><a href="#执行流程解析" class="headerlink" title="执行流程解析"></a>执行流程解析</h3><ol>
-<li><p><strong>主线程开始执行</strong>：</p>
-<ul>
-<li>当代码开始执行时，JavaScript 引擎会将全局上下文推入执行栈。</li>
-</ul>
+<li><p>示例 1：<br>输入：n = 1<br>输出：true</p>
 </li>
-<li><p>**调用 <code>fetchUserData(1)</code>**：</p>
-<ul>
-<li>主线程遇到 <code>fetchUserData(1)</code> 的调用，进入这个函数。</li>
-<li>在 <code>fetchUserData</code> 函数内部，调用 <code>fetch</code> 方法发起网络请求。</li>
-<li><code>fetch</code> 是异步操作，返回一个 Promise。此时，<code>fetch</code> 的执行会被放入 Web API 环境中处理，主线程不会等待它完成，而是继续执行后面的代码。</li>
-</ul>
+<li><p>示例 2：<br>输入：n = 10<br>输出：false</p>
 </li>
-<li><p><strong>返回到主线程</strong>：</p>
-<ul>
-<li><code>fetchUserData</code> 函数返回 Promise 对象后，控制权回到主线程，执行栈中的 <code>fetchUserData</code> 函数被弹出。</li>
-<li>接下来，主线程继续执行后面的代码，输出 <code>Fetching user data...</code> 到控制台。</li>
-</ul>
-</li>
-<li><p><strong>处理 Promise</strong>：</p>
-<ul>
-<li>当 <code>fetch</code> 请求完成时，它会调用相应的回调函数（即 <code>then()</code> 中的函数），这时会将这个回调函数放入微任务队列（Microtask Queue）。</li>
-<li>微任务队列优先于宏任务队列（Task Queue），所以在主线程空闲时，会优先执行微任务队列中的任务。</li>
-</ul>
-</li>
-<li><p><strong>处理响应</strong>：</p>
-<ul>
-<li>当主线程完成当前执行栈中的所有任务后，开始检查微任务队列。</li>
-<li>从微任务队列中取出 <code>then()</code> 中的回调函数，执行它。</li>
-<li>在这个回调中，首先检查响应是否成功，如果成功，则调用 <code>response.json()</code>，并返回解析后的 JSON 数据。</li>
-<li>然后，继续执行下一个 <code>then()</code> 中的回调，输出用户数据到控制台。</li>
-</ul>
-</li>
-<li><p><strong>处理错误</strong>：</p>
-<ul>
-<li>如果在任何步骤中发生错误（例如网络请求失败），则会调用 <code>catch()</code> 中的错误处理函数，输出错误信息到控制台。</li>
-</ul>
-</li>
-</ol>
-<h3 id="执行栈与任务队列的关系"><a href="#执行栈与任务队列的关系" class="headerlink" title="执行栈与任务队列的关系"></a>执行栈与任务队列的关系</h3><ul>
-<li><p><strong>执行栈</strong>：</p>
-<ul>
-<li>主要用于同步代码的执行。当函数被调用时，它会被推入执行栈，执行完成后从栈中弹出。</li>
-</ul>
-</li>
-<li><p><strong>微任务队列</strong>：</p>
-<ul>
-<li>存放 <code>Promise</code> 的回调和其他微任务。当主线程空闲时，会优先执行微任务队列中的任务。</li>
-</ul>
+<li><p><strong>提示：1 &lt;= n &lt;= 10^9</strong></p>
 </li>
 </ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>在这段代码的执行过程中，JavaScript 的事件循环机制确保了主线程不会被阻塞。尽管 <code>fetch</code> 是异步操作，但主线程在发起请求后继续执行后面的代码，保持响应能力。最终，网络请求完成后，相关的回调被放入微任务队列，并在主线程空闲时执行，从而处理异步操作的结果。这样，整个过程保证了代码的高效和非阻塞特性。</p>
-<h3 id="fetch原理"><a href="#fetch原理" class="headerlink" title="fetch原理"></a>fetch原理</h3><p>好的，让我们深入探讨一下“fetch 的执行会被放入 Web API 环境中处理”这句话的含义。</p>
-<h3 id="Web-API-环境"><a href="#Web-API-环境" class="headerlink" title="Web API 环境"></a>Web API 环境</h3><p>在 JavaScript 中，尤其是在浏览器中，存在一个称为 Web API 的环境。这些 API 提供了<strong>与浏览器和操作系统的交互能力</strong>，例如处理 DOM、发起网络请求、定时器等。Web API 是在 JavaScript 引擎之外的环境中运行的。</p>
-<h3 id="fetch-的工作机制"><a href="#fetch-的工作机制" class="headerlink" title="fetch 的工作机制"></a><code>fetch</code> 的工作机制</h3><ol>
-<li><p><strong>异步调用</strong>：</p>
-<ul>
-<li>当你调用 <code>fetch(url)</code> 时，JavaScript 引擎并不会立即执行这个请求，而是将这个请求的处理交给 Web API。此时，<code>fetch</code> 函数<strong>立即返回一个 Promise 对象</strong>，表示请求的未来结果。</li>
-</ul>
-</li>
-<li><p><strong>请求的处理</strong>：</p>
-<ul>
-<li>Web API 接收到 <code>fetch</code> 请求后，会去执行实际的网络操作（例如，通过 HTTP 协议向服务器发送请求）。这个过程是异步的，意味着 JavaScript 引擎不会等待这个请求完成，而是继续执行后面的代码。</li>
-</ul>
-</li>
-<li><p><strong>Promise 的状态变化</strong>：</p>
-<ul>
-<li>一旦网络请求完成（无论是成功还是失败），Web API 会将结果（例如，响应数据或错误信息）传递回 JavaScript 引擎。此时，Promise 的状态会被更新：<ul>
-<li>如果请求成功，Promise 的状态变为“已解决”（fulfilled），并将响应对象作为值。</li>
-<li>如果请求失败，Promise 的状态变为“已拒绝”（rejected），并将错误信息作为值。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>微任务队列</strong>：</p>
-<ul>
-<li>当 Promise 的状态变化时，<strong>Web API 会将与之相关的回调（即 <code>then()</code> 或 <code>catch()</code> 中的函数）放入微任务队列</strong>。这样，JavaScript 引擎可以在主线程空闲时执行这些微任务。</li>
-</ul>
-</li>
-</ol>
-<h3 id="事件循环的角色"><a href="#事件循环的角色" class="headerlink" title="事件循环的角色"></a>事件循环的角色</h3><p>事件循环（Event Loop）是 JavaScript 的核心机制之一，它负责协调主线程和异步操作之间的执行。当主线程完成当前执行栈中的所有同步操作后，事件循环会检查微任务队列，优先执行其中的任务（如 <code>then()</code> 和 <code>catch()</code> 中的回调）。因此，尽管 <code>fetch</code> 是异步的，最终结果会在主线程空闲时得到处理。</p>
-<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>综上所述，“fetch 的执行会被放入 Web API 环境中处理”意味着当你调用 <code>fetch</code> 时，实际的网络请求是由浏览器的 Web API 处理的，而不是在 JavaScript 引擎的执行栈中同步执行的。这种设计使得 JavaScript 能够高效地处理异步操作，保持主线程的响应能力，从而实现非阻塞的编程模型。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>由于2的幂在10^9之中是可数的且是有限的，如果我们将这些<code>2的幂全部记录下来</code>，并且统计每个数他所含的数字有多少个（如 一个1，三个2等等），记录到哈希表中，我们再判断函数<code>所传的数字分别有多少个数字</code>，是否在我们的哈希表中，即可得到答案。</p>
+<p>由于 2^29&lt;10^9&lt;2^30 ，因此在 [1,10^9] 范围内有 2^0,2^1,⋯,2^29一共 30 个 2 的幂。对这 30 个数的每个数，<strong>我们可以预处理其十进制表示的字符数组中从 0 到 9 每个字符的出现次数</strong>，记在一个长度为 10 的数组中，<strong>并用一哈希表记录这些数组</strong>。对于数字 n，我们同样统计其十进制表示的字符数组中从 0 到 9 每个字符的出现次数，然后去哈希表中查找，若存在则说明 n 可以通过重排得到 2 的幂，否则不能。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><div class="code-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countDigits</span> = (<span class="params">n</span>) =&gt; {</span><br><span class="line">    <span class="keyword">const</span> cnt = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (n) {</span><br><span class="line">        cnt[n % <span class="number">10</span>]++;</span><br><span class="line">        n = <span class="title class_">Math</span>.<span class="title function_">floor</span>(n / <span class="number">10</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> cnt.<span class="title function_">join</span>(<span class="string">''</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reorderedPowerOf2 = <span class="keyword">function</span>(<span class="params">n</span>) {</span><br><span class="line">    <span class="keyword">const</span> powerOf2Digits = <span class="keyword">new</span> <span class="title class_">Set</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">1</span>; n &lt;= <span class="number">1e9</span>; n &lt;&lt;= <span class="number">1</span>) {</span><br><span class="line">        powerOf2Digits.<span class="title function_">add</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> powerOf2Digits.<span class="title function_">has</span>(<span class="title function_">countDigits</span>(n));</span><br><span class="line">};</span><br></pre></td></tr></table></figure></div>
+
+
 
 		</div>
 
@@ -576,18 +621,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 深入理解JS中的异步函数</li>
+        <li><strong>Title:</strong> 力扣-重新排序得到 2 的幂</li>
         <li><strong>Author:</strong> tianyi</li>
         <li><strong>Created at
-                :</strong> 2025-04-26 10:46:35</li>
+                :</strong> 2025-08-10 10:01:05</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-26 10:59:10
+                    :</strong> 2025-08-10 10:13:53
             </li>
         
         <li>
-            <strong>Link:</strong> https://github.com/ztygod/2025/04/26/深入理解JS中的异步函数/
+            <strong>Link:</strong> https://github.com/ztygod/2025/08/10/力扣-重新排序得到-2-的幂/
         </li>
         <li>
             <strong>
@@ -612,6 +657,14 @@
 				<a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>&nbsp;
 			</li>
 			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">#位运算</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">#哈希表</a>&nbsp;
+			</li>
+			
 		</ul>
 		
 
@@ -620,23 +673,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/04/26/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3TCP%E5%8D%8F%E8%AE%AE/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">深入理解TCP协议</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/04/13/websocket%E8%AF%A6%E8%A7%A3/">
+				<a class="next" rel="next" href="/2025/08/09/Rust%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">websocket详解</span>
+						<span class="post-nav-title-item">Rust中的错误处理</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -700,8 +741,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">深入理解JS中的异步函数</div>
-		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E6%98%8E%E7%A1%AE%E4%B8%80%E7%82%B9%EF%BC%8C-%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E4%B8%8D%E7%AD%89%E4%BA%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1-%E3%80%82"><span class="nav-text">首先明确一点，&#x3D;&#x3D;异步函数不等于微任务&#x3D;&#x3D;。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E8%A7%A3%E6%9E%90"><span class="nav-text">执行流程解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%A0%88%E4%B8%8E%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">执行栈与任务队列的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fetch%E5%8E%9F%E7%90%86"><span class="nav-text">fetch原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-API-%E7%8E%AF%E5%A2%83"><span class="nav-text">Web API 环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fetch-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6"><span class="nav-text">fetch 的工作机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%A7%92%E8%89%B2"><span class="nav-text">事件循环的角色</span></a></li></ol>
+		<div class="page-title">力扣-重新排序得到 2 的幂</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li></ol>
 
 	</div>
 </div>
